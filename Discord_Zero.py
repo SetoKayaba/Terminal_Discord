@@ -8,6 +8,7 @@ Link: https://www.github.com/brni-dev
 
 from os import getenv
 from dotenv import load_dotenv
+from discord.Client import fetch_channel
 
 # loads .env file and gets the TOKEN variable from the .env file
 load_dotenv()
@@ -53,11 +54,12 @@ def get_messages(_token, channel_id=None): # declaring shit with __example__ mea
     message_list=[]
     
     # oh jesus fucking christ, yandere dev 2.0 incoming
+    chnlnm = fetch_channel(channel_id).name.upper()
     if channel_id==None:cpointer=input("Enter The Channel ID you'd like to access: \t")
-    elif channel_id.upper()=='POKEMON':cpointer=channel_list[0]
-    elif channel_id.upper()=='NEUROSIS':cpointer=channel_list[1]
-    elif channel_id.upper()=='PRINCIPALS':cpointer=channel_list[2]
-    elif channel_id.upper()=='HANGOUT':cpointer=channel_list[3]
+    elif chnlnm=='POKEMON':cpointer=channel_list[0]
+    elif chnlnm=='NEUROSIS':cpointer=channel_list[1]
+    elif chnlnm=='PRINCIPALS':cpointer=channel_list[2]
+    elif chnlnm=='HANGOUT':cpointer=channel_list[3]
     print("-------------------------------------------- \n\n")
     else:cpointer=channel_id
   

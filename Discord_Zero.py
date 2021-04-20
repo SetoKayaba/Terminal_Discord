@@ -1,6 +1,6 @@
 """
 READ ME PLEASE
-So first of all, why in gods name are you using actual requests do Discords API
+So first of all, why in gods name are you using actual requests to Discords API
 Check out my github repos for how to selfbot using the Discord.py wrapper
 Link: https://www.github.com/brni-dev
 !! IMPORTANT !! do a pip freeze and include a requirements.txt for your thing
